@@ -1,3 +1,31 @@
+* {
+  font-family: "Comfortaa", cursive;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.fullPage {
+}
+
+.circle {
+  margin: 12.5vh auto;
+  width: 75vh;
+  height: 75vh;
+  background-color: rgb(100, 100, 114);
+  border-radius: 50%;
+  align-items: center;
+  animation: rotation 40s infinite linear;
+}
+
 .title {
-  color: blue;
+  line-height: 75vh;
+  margin: auto;
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(252, 252, 252);
 }

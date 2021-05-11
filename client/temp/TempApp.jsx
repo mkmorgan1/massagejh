@@ -4,7 +4,9 @@ import styles from './tempStyles.module.scss';
 const TempApp = () => {
   return (
     <>
-      <h1 className={styles.title}>Coming Soon</h1>
+      <div className={styles.circle}>
+        <h1 className={styles.title}>Coming Soon!!</h1>
+      </div>
     </>
   );
 }
