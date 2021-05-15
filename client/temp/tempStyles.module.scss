@@ -6,7 +6,15 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 .fullPage {
@@ -19,13 +27,17 @@
   background-color: rgb(100, 100, 114);
   border-radius: 50%;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   animation: rotation 40s infinite linear;
 }
 
 .title {
-  line-height: 75vh;
+  line-height: 50vh;
   margin: auto;
   vertical-align: middle;
   text-align: center;
   color: rgb(252, 252, 252);
+  animation: rotationReverse 40s infinite linear;
 }
