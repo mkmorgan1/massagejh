@@ -2,6 +2,7 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+// @include motion-ui-queue;
 
 * {
   font-family: "Comfortaa", cursive;
@@ -22,15 +23,18 @@
     transform: rotate(0deg);
   }
 }
-.fullPage {
+.mainTitle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .circle {
   @include mui-animation(slide, spin(360deg));
   animation-duration: 4s;
   margin: 12.5vh auto;
-  width: 70vh;
-  height: 70vh;
+  width: 60vh;
+  height: 60vh;
   background-color: rgb(100, 100, 114);
   border-radius: 50%;
   align-items: center;
@@ -49,18 +53,21 @@
   // animation: rotationReverse 40s infinite linear;
 }
 
-.contact {
-  @include mui-series {
-    .contactTitle {
-      @include mui-queue(1s, 1s, shake());
-    }
-    .email {
-      @include mui-queue(1s, 2s, spin());
-    }
-    .phone {
-      @include mui-queue(wiggle);
-    }
+.contactTitle,
+.email,
+.phone {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+@include mui-series {
+  .contactTitle {
+    @include mui-queue(1s, 0s, fade, slide);
   }
-  // @include mui-animation(slide($direction: up));
-  // animation-duration: 1s;
+  .email {
+    @include mui-queue(1s, 0s, fade, slide);
+  }
+  .phone {
+    @include mui-queue(1s, 0s, fade, slide);
+  }
 }
