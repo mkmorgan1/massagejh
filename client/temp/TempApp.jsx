@@ -13,6 +13,8 @@ const TempApp = () => {
         <h1 className='mainTitle'>Massage JH</h1>
         <div className='circle'>
           <h1 className='title'>Coming Soon!!</h1>
+          <div className='highlight'></div>
+          <div className='shadow'></div>
         </div>
         <hr/>
         <div id='contact'>
